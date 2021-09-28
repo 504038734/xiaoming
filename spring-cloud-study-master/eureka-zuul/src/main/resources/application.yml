@@ -1,0 +1,16 @@
+server:
+  port: 8888
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1688/eureka/
+
+zuul:
+  host:
+    connect-timeout-millis: 3000
+    socket-timeout-millis: 3000
+  routes:
+    eureka-consumer-feign-zul:
+      path: /feign-zul/**
+      serviceId: eureka-consumer-feign

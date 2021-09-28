@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: eureka-consumer-feign
+server:
+  port: 3688
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1688/eureka/
+feign:
+  hystrix:
+    enabled: true

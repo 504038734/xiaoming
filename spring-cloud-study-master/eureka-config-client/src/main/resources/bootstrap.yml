@@ -1,0 +1,20 @@
+server:
+  port: 2222
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1688/eureka/
+
+spring:
+  application:
+    name: static-configer
+  profiles:
+    active: dev
+  cloud:
+    config:
+      # 配置了注册中心,这个可有可无了
+      uri: http://localhost:1111/
+      discovery:
+        enabled: true
+        service-id: config-server

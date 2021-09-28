@@ -1,0 +1,23 @@
+server:
+  port: 1111
+  tomcat:
+    uri-encoding: UTF-8
+spring:
+  application:
+    name: config-server
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/cnf
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1688/eureka/
